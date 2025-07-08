@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Red Hat Text", sans-serif;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(252, 248, 245);
+}
+
+.max-content-border {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 100px 20px;
+}
+
+.desserts-full {
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading {
+    font-size: 3.125rem;
+}
+
+.dessert-section {
+    margin-top: 50px;
+}
+
+.dessert-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 250px;
+    gap: 20px;
+}
+
+.dessert-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.add-to-cart {
+    position: absolute;
+    top: 13.5rem;
+    left: 3rem;
+}
+
+.atc-btn {
+    position: absolute;
+    border: 1px solid red;
+    display: flex;
+    width: fit-content;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 2rem;
+    background-color: #fff;
+}
+
+.product-num {
+
+    border: 1px solid red;
+    display: flex;
+    width: fit-content;
+    gap: 1.813rem;
+    padding: 7px 20px;
+    border-radius: 2rem;
+    background-color: rgb(200, 59, 14);
+    color: #fff;
+}
+
+.item-toggle {
+    border: 1px solid white;
+    padding: 7px 7px;
+    margin: auto;
+    display: flex;
+    border-radius: 50%;
+}
+
+.item-toggle:first-child {
+    padding: 11px 7px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.category {
+    font-size: 0.80rem;
+}
+
+.your-cart {
+    background-color: #fff;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 20px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+}
+
+.cart-heading {
+    margin-right: auto;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.cake {
+    margin-bottom: 20px;
+}
+

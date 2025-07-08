@@ -11,21 +11,63 @@
   <title>Product list with cart</title>
   <link rel="stylesheet" href="style.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body>
 
   <div class="max-content-border">
-    <!-- left section -->
-    <section class="desserts">
-      <h2 class="heading">Desserts</h2>
-      <div class="dessert-section"></div>
-    </section>
-    <!-- right section -->
 
-    <div class="your-cart">
-      <h3 class="cart-heading">Your Cart (<span>0</span>)</h3>
-    </div>
+    <section class="desserts-full">
+      <!-- left section -->
+      <div class="left-section">
+        <h2 class="heading">Desserts</h2>
+        <!-- dessert main section -->
+        <div class="dessert-section">
+          <!-- card element -->
+          <div class="dessert-card">
+            <img class="dessert-img" src="assets/images/image-baklava-desktop.jpg" alt="">
+            <!-- add to cart  -->
+            <div class=" add-to-cart">
+              <span class="atc-btn">
+                <img src="assets/images/icon-add-to-cart.svg" alt="">
+                <p>Add to Cart</p>
+              </span>
+              <span class="product-num">
+                <div class="item-toggle">
+                  <img src="assets\images\icon-decrement-quantity.svg" alt="">
+                </div>
+                <span>1</span>
+                <div class="item-toggle">
+                  <img src="assets\images\icon-increment-quantity.svg" alt="">
+                </div>
+              </span>
+            </div>
+            <!-- product info -->
+            <div class="product-info">
+              <p class="category">Waffle</p>
+              <p class="dessert-name">Waffle with Berries</p>
+              <span class="dessert-price">$<span>6.50</span></span>
+            </div>
+          </div>
+        </div>
+        <!-- dessert section end -->
+      </div>
+
+
+      <!-- right section -->
+
+      <div class="your-cart">
+        <h3 class="cart-heading">Your Cart (<span>0</span>)</h3>
+        <img class="cake" src="assets/images/illustration-empty-cart.svg" alt="">
+        <p class="cart-bottom-txt">Your added items will appear here</p>
+      </div>
+    </section>
+
 
   </div>
 
