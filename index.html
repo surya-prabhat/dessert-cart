@@ -47,6 +47,7 @@
                 </div>
               </span>
             </div>
+
             <!-- product info -->
             <div class="product-info">
               <p class="category">Waffle</p>
@@ -63,13 +64,113 @@
 
       <div class="your-cart">
         <h3 class="cart-heading">Your Cart (<span>0</span>)</h3>
-        <img class="cake" src="assets/images/illustration-empty-cart.svg" alt="">
-        <p class="cart-bottom-txt">Your added items will appear here</p>
+        <!-- when cart is empty -->
+        <div class="cart-empty">
+          <img class="cake" src="assets/images/illustration-empty-cart.svg" alt="">
+          <p class="cart-bottom-txt">Your added items will appear here</p>
+        </div>
+
+
+        <!-- added item -->
+
+        <div class="cart-with-item">
+
+          <div class="add-item-multiple">
+            <div class="add-item">
+              <div class="prod-info">
+                <p class=" product-name">Classic Tiramisu</p>
+                <div class="product-num-info">
+                  <span class="qty">1x</span>
+                  <span class="product-price">@ $<span>5.50</span></span>
+                  <span class="price-add">$<span>5.50</span></span>
+                </div>
+              </div>
+              <img class="remove" src="assets\images\icon-remove-item.svg" alt="">
+            </div>
+
+            <div class="add-item">
+              <div class="prod-info">
+                <p class=" product-name">Classic Tiramisu</p>
+                <div class="product-num-info">
+                  <span class="qty">1x</span>
+                  <span class="product-price">@ $<span>5.50</span></span>
+                  <span class="price-add">$<span>5.50</span></span>
+                </div>
+              </div>
+              <img class="remove" src="assets\images\icon-remove-item.svg" alt="">
+            </div>
+          </div>
+
+
+          <div class="confirm-order">
+            <div class="order-total">
+              <p class="total-price">Order Total</p>
+              <span class="tp-number">$<span>46.50<span></span>
+            </div>
+
+            <div class="carbon-neutral">
+              <img src="assets\images\icon-carbon-neutral.svg" alt="">
+              <p class="cn-message">This is a <span>carbon-neutral</span> delivery</p>
+            </div>
+
+            <button class="confirm-order-btn">Confirm Order</button>
+          </div>
+
+        </div>
+
+
       </div>
     </section>
 
-
   </div>
+
+  <section class="order-confirmed">
+
+    <div class="oc-card">
+      <img class="oc-tick" src="assets\images\icon-order-confirmed.svg" alt="">
+
+      <div class="enjoy-food">
+        <h2 class="confirmed">Order Confirmed</h2>
+        <p class="enjoy-food">We hope you enjoy your food!</p>
+      </div>
+
+      <div class="oc-product-card-section">
+
+        <div class="oc-product-cards-multiple">
+
+          <div class="oc-product-cards">
+
+            <img src="assets\images\image-baklava-thumbnail.jpg" alt="">
+
+            <div class="prod-info">
+              <p class=" product-name">Classic Tiramisu</p>
+
+              <div class="product-num-info">
+                <span class="qty">1x</span>
+                <span class="product-price">@ $<span>5.50</span></span>
+                <span class="price-add">$<span>5.50</span></span>
+              </div>
+
+            </div>
+
+            <span class="oc-price-add">$<span>5.50</span></span>
+
+          </div>
+
+        </div>
+
+        <div class="order-total">
+          <p class="total-price">Order Total</p>
+          <span class="tp-number">$<span>46.50<span></span>
+        </div>
+
+
+
+      </div>
+
+      <button class="confirm-order-btn">Confirm Order</button>
+
+  </section>
 
   <script src="app.js"></script>
 </body>
