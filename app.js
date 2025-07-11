@@ -12,7 +12,7 @@ const createDessert = async () => {
   for (let i of data.data) {
     dessertSection.innerHTML +=
 
-      `<div class="dessert-card">
+      `<div class="dessert-card" >
             <img class="dessert-img" src="${i.image.desktop}" alt="">
             <!-- add to cart  -->
             <div class=" add-to-cart">
@@ -34,11 +34,41 @@ const createDessert = async () => {
             <!-- product info -->
             <div class="product-info">
               <p class="category">${i.category}</p>
-              <p class="dessert-name">${i.name}</p>
+              <p class="dessert-name" id="${i.id}">${i.name}</p>
               <span class="dessert-price">$<span>${i.price}</span></span>
             </div>
           </div>`
   }
+
+  // add to cart cards html create
+
+  const cartWithItem = document.querySelector(".cart-with-item")
+  cartWithItem.classList.add("cartWithItem-off")
+
+  const addItemMultiple = document.querySelector(".add-item-multiple")
+
+
+
+  addItemMultiple.innerHTML = ""
+
+  function cartCard(cardNameMain, cardIdMain) {
+    addItemMultiple.innerHTML +=
+
+      `<div class="add-item" id="dessert-${cardIdMain}">
+              <div class="prod-info">
+                <p class=" product-name">${cardNameMain}</p>
+                <div class="product-num-info">
+                  <span class="qty-outer"><span class="qty">1</span>x</span>
+                  <span class="product-price-outer">@ $<span class="product-price">5.50</span></span>
+                  <span class="price-add-outer">$<span class="price-add">5.50</span></span>
+                </div>
+              </div>
+              <img class="remove" src="assets/images/icon-remove-item.svg" alt="">
+            </div>
+          </div>`
+  }
+
+
 
   // clicking add to cart - loop through each card first
 
@@ -50,13 +80,22 @@ const createDessert = async () => {
     const decrease = card.querySelector(".decrease")
     const increase = card.querySelector(".increase")
     const incQty = card.querySelector(".inc-qty")
-    console.dir(incQty)
+    // console.log(cardName.innerText)
 
     // add to cart toggle
     atcBtn.addEventListener("click", () => {
       atcBtn.classList.add("atcbtn-off")
       productNum.classList.add("productnum-on")
+      const cardName = card.querySelector(".dessert-name")
+      let cardNameMain = cardName.innerText
+      let cardIdMain = cardName.id
+      // console.dir(cardName)
+      cartCard(cardNameMain, cardIdMain)
       console.log("button clicked")
+      console.dir(addItemMultiple)
+      const cartWithItem = document.querySelector(".cart-with-item")
+      cartWithItem.classList.remove("cartWithItem-off")
+
     })
 
     // increase and decrease cart value
@@ -67,13 +106,24 @@ const createDessert = async () => {
 
     // decrease
 
-    decrease.addEventListener("click", () => {
+    decrease.addEventListener("click", (event) => {
       changeNum = changeNum - 1
       incQty.innerText = changeNum
+      // console.log(changeNum)
       if (changeNum <= 0) {
+        const cardName = card.querySelector(".dessert-name")
+        let cardIdProduct = cardName.id
+        console.log(cardIdProduct)
+        const addItem = document.getElementById(`dessert-${cardIdProduct}`)
+        addItem.remove()
         atcBtn.classList.remove("atcbtn-off")
         productNum.classList.remove("productnum-on")
         incQty.innerText = 1
+        console.dir(addItemMultiple)
+        if (addItemMultiple.childElementCount === 0) {
+          const cartWithItem = document.querySelector(".cart-with-item")
+          cartWithItem.classList.add("cartWithItem-off")
+        }
       }
     })
 

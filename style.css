@@ -177,11 +177,25 @@ body {
     font-weight: 600;
 }
 
+.qty-outer {
+    color: rgb(203, 130, 106);
+    font-weight: 600;
+}
+
 .product-price {
     color: rgb(192, 181, 181);
 }
 
+.product-price-outer {
+    color: rgb(192, 181, 181);
+}
+
 .price-add {
+    color: rgb(174, 164, 160);
+    font-weight: 600;
+}
+
+.price-add-outer {
     color: rgb(174, 164, 160);
     font-weight: 600;
 }
@@ -303,4 +317,8 @@ body {
 .productnum-on {
     pointer-events: auto;
     opacity: 1;
+}
+
+.cartWithItem-off {
+    display: none;
 }
