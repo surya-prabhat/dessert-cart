@@ -322,3 +322,7 @@ body {
 .cartWithItem-off {
     display: none;
 }
+
+.cartEmpty-off {
+    display: none;
+}
